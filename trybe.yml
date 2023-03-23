@@ -1,0 +1,30 @@
+ignore_files:
+  - src/flask_app/templates/
+  - src/flask_app/app.py
+  - data/jobs.csv
+  - src/flask_app/more_insights.py
+  - src/pre_built/
+  - tests/mocks/
+  - tests/marker.py
+  - tests/sorting/conftest.py
+  - tests/sorting/mocks.py
+  - tests/__init__.py
+  - tests/conftest.py
+  - tests/test_industries.py
+  - tests/test_jobs.py
+  - tests/test_salaries.py
+  - tests/test_routes_and_views.py
+  - tests/test_flask_app.py
+  - tests/test_more_insights.py
+  - tests/brazilian/conftest.py
+  - tests/brazilian/mocks.py
+  - tests/counter/conftest.py
+  - tests/counter/mocks.py
+  - .env
+  - dev-requirements.txt
+  - requirements.txt
+  - setup.cfg
+  - pyproject.toml
+  - Dockerfile
+  - docker-compose.yml
+  
