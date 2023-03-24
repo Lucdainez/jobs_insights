@@ -4,10 +4,15 @@ from src.insights.jobs import read
 
 def get_max_salary(path: str) -> int:
     data = read(path)
-    list_of_max_salaries = [a["max_salary"] for a in data
-                            if a["max_salary"] != '']
-    list_of_max_salaries_int = list(map(int, list_of_max_salaries))
-    return max(list_of_max_salaries_int)
+    list_of_max_salaries = []
+    for i in data:
+        if i["max_salary"]:
+            try:
+                number = int(i["max_salary"])
+                list_of_max_salaries.append(number)
+            except ValueError:
+                pass
+    return max(list_of_max_salaries)
 
 
 def get_min_salary(path: str) -> int:
