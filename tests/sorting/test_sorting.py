@@ -1,5 +1,6 @@
 import pytest
 from src.pre_built.sorting import sort_by
+
 # from tests.brazilian.test_brazilian_jobs import return_of_list_of_dict
 
 
@@ -19,7 +20,7 @@ def jobs():
             "min_salary": 2000,
             "max_salary": 5000,
             "date_posted": "2022-03-01",
-        }
+        },
     ]
 
 
@@ -39,7 +40,7 @@ def jobs_order_by_min_salary():
             "min_salary": 3000,
             "max_salary": 4000,
             "date_posted": "2022-02-01",
-        }
+        },
     ]
 
 
@@ -54,5 +55,7 @@ def test_sort_by_criteria(jobs, jobs_order_by_min_salary):
     sort_by(jobs, "date_posted")
     assert jobs == jobs
 
-    with pytest.raises(ValueError):
+    with pytest.raises(
+        ValueError, match="invalid sorting criteria: invalid_criteria"
+    ):
         sort_by(jobs, "invalid_criteria")
